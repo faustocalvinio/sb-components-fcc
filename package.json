@@ -1,12 +1,16 @@
 {
-  "name": "my-storybook-fcc",
-  "private": true,
-  "version": "0.0.0",
+  "name": "fcc-custom-components",
+  "private": false,
+  "version": "0.0.1-rc2",
   "type": "module",
   "keywords": [
-    "react","faustocalvinio","components"
+    "react",
+    "faustocalvinio",
+    "components"
   ],
-  "license":"MIT",
+  "main":"dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
   "homepage": "https://faustocalvinio.netlify.app/",
   "repository": {
     "url": "https://github.com/faustocalvinio/sb-components-fcc",
@@ -17,26 +21,25 @@
   ],
   "release": {
     "branches": [
-      "main"         
-    ]    
+      "main"
+    ]
   },
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   },
-  
   "scripts": {
     "dev": "npm run storybook",
-    "build": "tsc && vite build",
+    "build": "npm run clean && tsc && npm run copyfiles",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_ea9b4db77243234"
-  },  
+    "chromatic": "npx chromatic --project-token=chpt_ea9b4db77243234",
+    "clean": "rimraf dist/",
+    "copyfiles": "copyfiles -u 1 src/**/*.css dist/"
+  },
   "devDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "@storybook/addon-essentials": "^7.6.4",
     "@storybook/addon-interactions": "^7.6.4",
     "@storybook/addon-links": "^7.6.4",
@@ -51,10 +54,14 @@
     "@typescript-eslint/parser": "^6.14.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "chromatic": "^10.1.0",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.55.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "eslint-plugin-storybook": "^0.6.15",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^5.0.5",
     "storybook": "^7.6.4",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
