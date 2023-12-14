@@ -1,7 +1,7 @@
 {
   "name": "fcc-custom-components",
   "private": false,
-  "version": "0.0.1-rc2",
+  "version": "0.0.1-rc3",
   "type": "module",
   "keywords": [
     "react",
@@ -25,8 +25,8 @@
     ]
   },
   "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "scripts": {
     "dev": "npm run storybook",
