@@ -1,7 +1,7 @@
 {
   "name": "fcc-custom-components",
   "private": false,
-  "version": "0.0.1-rc4",
+  "version": "0.1.0",
   "type": "module",
   "keywords": [
     "react",
@@ -42,7 +42,7 @@
     "clean": "rimraf dist/",
     "copyfiles": "copyfiles -u 1 src/**/*.css dist/",
     "push:npm": "np",
-    "test":"echo 'all test passed'"
+    "test": "echo 'all test passed'"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.4",
@@ -72,6 +72,5 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
   },
-  "readme": "ERROR: No README data found!",
-  "_id": "my-storybook-fcc@0.0.0"
+  "readme": "ERROR: No README data found!"
 }
